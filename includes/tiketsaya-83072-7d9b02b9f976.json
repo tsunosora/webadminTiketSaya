@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "tiketsaya-83072",
+  "private_key_id": "7d9b02b9f9763668fa7e271b9f93c2c2900ef5e2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCW5EAaGN+tATIK\nE+RzkFTWZv6NA/d1O7iuiKUx3JJHBl4co9jVXabVtKZaxxQJM5qKYTVrLOMBe3Ww\nQJYnRklgdQQJ9xXHsfCyWQlbahDiKUi6PyXUJrhEHfKYWeCOyyGCBcZzL+E+gF8u\npCdJiMd7ZNDmQeaARSUMcPLptNAsg/0f3ZK2lEDJzsoz1t8r8MGKx05l1JVJQt1N\nKi9M368gJ6Rkl8CgP9sDe+G89j1ypvyS/I+xVlaXxjFXUziouY4I4edqHICJPBc6\nSfb18Qc1ffZ4tg8He0P7BdTC5k96BftapfYhiF/l2QpR8RPAdOsUNZ5j+7EQUl8W\nJ7qJjzDtAgMBAAECggEACnNWiTgtzbKmf5IvIV3eslbBzIx4yBLR0KzAHDr1mpuz\nSvKCIwzwcB6p4uGk3ppHWswuwfSC6Ghfl0xx2diBXn/cPsBxLrqBPCj0f/NRpghL\n9DJJcW8ZFgao9apL5jflYzb5LqMjS4vii71sxygFAOPToA7yYvHnBfyQpmUSgfKr\nCSLc0jp9JUtCY4++KZ5ev84hod91/wfHV9sl0sOAXThKn6mg9tmBgTB/NmaCQ4E8\ntA/kVG+e8tHKN5DKTaai5AQkNrnv5ArdnjvU7oBt2e5U3ej3vBspvCitOJJ7y+Kw\n+ghswTdZuWsJxZq4+zudJakirJO4ejCyeX9O7LFoQQKBgQDLC1fW4oju9ha+l3Pz\n9+7DslV1h0u+3T4M8tEdAFKO2sO4X0QecCgULRjbaz+aUn7YZ+u9qoBW1ZqOAh9G\nL21Vpn8w5hr3k2ATncn1gWJg2q7PwsIlcU59UwwDrD+Z29pb3iBdJcUT2mn53TEf\nXUjP/9gMjXz5jQa9qWgfZ7boUQKBgQC+PtQE+V0UIzhfmcjZaq+R/6ZGSQM7sFT+\nZV/p+lun7dIGFIpc2F0929uHbL6qOzNaaIIbKLwz2OoZW7BCpl1kSH8DSJuyspZ9\n8ADQbMDwVNIJ/U7n4/TWCQRmBu6nuP1FF7ZW2K0UKkxPpPGqnlva7+pE3jMUzbvU\nSWXZgriz3QKBgBPbKx7njm6YAEdpNjywjVfz86mHrp+esTfA8zQ72NcBi8xW/Klh\nXHoEov6qMVEdKixtlT86EkzrnK6whHBvqOiMXLnidtapQecJMjvhCEbie9/zctsI\nhp145p7hVGLufh8nzNBvJiO34089E1W24Kz+nxkzKPqakQMxMu6HTPrRAoGBAJ/3\nMEumac9+9e3c33eBL3Ox5NwAlIlh8XWfRBD3hI4leI3IQ7dh7rUO4v5yP7ff44RH\nj+7KR8XIxL7hy8mfHbQvCS13pgOSCtyGLAkVCP6MM7hWmDx//uTh3CL1/UJmV//6\nukU4GAB2uIfXh6URVuc3CGMz+vupKiCMPumv8yK5AoGAfJXSBWZw6B0f0uiwAyHP\nLiKwd37+ucFPXdRGYf/tjx3+d9mn4N/vLjf3vr3jre2he1+WbDiduvg11k6XLWHC\n1/xwz5mHoL038ioWY9XkaS0oIr/NgR/Irkn4vqy3DtCVAvMCipubzOikQRGLXaPB\n3qvCUz42AwUVnsVQ5h31cAw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tiketsaya@tiketsaya-83072.iam.gserviceaccount.com",
+  "client_id": "114679254432783373662",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tiketsaya%40tiketsaya-83072.iam.gserviceaccount.com"
+}
