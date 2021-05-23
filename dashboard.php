@@ -11,11 +11,18 @@
     $checkdata_turis = $database->getReference($path_turis_fb)->getValue();
     
     //data Sales/tiket
-    $path_tiket_fb = 'MyTickets/';
-    $checkdata_tiket = $database->getReference($path_tiket_fb)->getValue();
+    $path_sale_fb = 'MyTickets';
+    $checkdata_sale = $database->getReference($path_sale_fb)->getValue();
+    
+    //data Sales/tiket
+    $path_wisata_fb = 'Wisata';
+    $checkdata_wisata = $database->getReference($path_wisata_fb)->getValue();
 
     // cetak data admin
     $nama_admin_f = $checkdata['nama_admin'];
+    
+    // cetak data admin
+    $role_admin_f = $checkdata['role_admin'];
 
 ?>
 
@@ -49,7 +56,7 @@
 
                 <div class="item-menus">
 
-                    <a href="dashboard.html" class="">
+                    <a href="dashboard.php" class="">
                         <div class="icon-item-menu">
                             <i class="fab fa-delicious"></i>
                         </div>
@@ -59,7 +66,7 @@
 
                 <div class="item-menus inactive">
 
-                    <a href="sales.html" class="">
+                    <a href="sale.php" class="">
                         <div class="icon-item-menu">
                             <i class="fas fa-ticket-alt"></i>
                         </div>
@@ -69,7 +76,7 @@
 
                 <div class="item-menus inactive">
 
-                    <a href="wisata.html" class="">
+                    <a href="wisata.php" class="">
 
                         <div class="icon-item-menu">
                             <i class="fas fa-globe"></i>
@@ -80,7 +87,7 @@
 
                 <div class="item-menus inactive">
 
-                    <a href="customers.html" class="">
+                    <a href="customers.php" class="">
                         <div class="icon-item-menu">
                             <i class="fas fa-users"></i>
                         </div>
@@ -90,7 +97,7 @@
 
                 <div class="item-menus inactive">
 
-                    <a href="setting.html" class="">
+                    <a href="setting.php" class="">
                         <div class="icon-item-menu">
                             <i class="fas fa-cog"></i>
                         </div>
@@ -100,7 +107,7 @@
 
                 <div class="item-menus inactive">
 
-                    <a href="logut.html" class="">
+                    <a href="logut.php" class="">
                         <div class="icon-item-menu">
                             <i class="fas fa-power-off"></i>
                         </div>
@@ -122,35 +129,35 @@
             </p>
 
             <p class="admin-level">
-                Super Admin
+                <?php echo($role_admin_f)  ?>
             </p>
 
             <ul class="admin-menu">
-                <a href="dashboard.html">
+                <a href="dashboard.php">
                     <li class="active-link">
                         My Dasboard
                     </li>
                 </a>
 
-                <a href="sales.html">
+                <a href="sales.php">
                     <li>
                         Ticket Sales
                     </li>
                 </a>
 
-                <a href="wisata.html">
+                <a href="wisata.php">
                     <li>
                         Manage Wisata
                     </li>
                 </a>
 
-                <a href="customers.html">
+                <a href="customers.php">
                     <li>
                         Customers <span class="badge-customers badge rounded-pill bg-primary">96</span>
                     </li>
                 </a>
 
-                <a href="setting.html">
+                <a href="setting.php">
                     <li>
                         Account Settings
                     </li>
@@ -216,7 +223,7 @@
                             </H4>
 
                             <p class="value-item">
-                                <?php echo count($checkdata_tiket); ?>
+                                <?php echo count($checkdata_sale); ?>
                             </p>
 
                             <p class="desc-item">
@@ -240,7 +247,7 @@
                             </H4>
 
                             <p class="value-item">
-                                6
+                            <?php echo count($checkdata_wisata); ?>
                             </p>
 
                             <p class="desc-item">
@@ -268,35 +275,32 @@
 
                     <div class="divider-line"></div>
 
-                    <div class="user-item">
-                        <div class="user-picture">
-                            <img src="images/admin_images.png" alt="">
-                        </div>
-                        <div class="user-info">
-                            <p class="title">
-                                Julia Aulie
-                            </p>
-                            <p class="sub-title">
-                                Traveller
-                            </p>
-                        </div>
-                        <a href="#" class="btn btn-small-border btn-primary ">Profile</a>
-                    </div>
+                    <?php
+                        foreach($checkdata_turis as $value_data_turis)
+                        {
+                        
+                    ?>
 
-                    <div class="user-item">
-                        <div class="user-picture">
-                            <img src="images/admin_images.png" alt="">
+                        <div class="user-item">
+                            <div class="user-picture">
+                                <img src="images/admin_images.png" alt="">
+                            </div>
+                            <div class="user-info">
+                                <p class="title">
+                                    <?php echo $value_data_turis['nama_engkap']; ?>
+                                </p>
+                                <p class="sub-title">
+                                    <?php echo $value_data_turis['bio']; ?>
+
+                                </p>
+                            </div>
+                            <a href="#" class="btn btn-small-border btn-primary ">Profile</a>
                         </div>
-                        <div class="user-info">
-                            <p class="title">
-                                Julia Aulie
-                            </p>
-                            <p class="sub-title">
-                                Traveller
-                            </p>
-                        </div>
-                        <a href="#" class="btn btn-small-border btn-primary ">Profile</a>
-                    </div>
+
+                    <?php } ?>
+
+                    
+                   
 
 
                 </div>
@@ -307,7 +311,7 @@
             <div class="col-md-6">
                 <div class="item-big-report col-md-12">
                     <p class="title">
-                        <span class="title-blue">NEWEST</span> USERS
+                        <span class="title-blue">NEWEST</span> SOLD
                     </p>
 
                     <p class="sub-title">
@@ -318,20 +322,40 @@
 
                     <div class="divider-line"></div>
 
+                    <?php
+                        
+                            foreach($checkdata_sale as $data_sale_final => $data_print_sale) {
+                                $path_data_based_on_username = 'Users/'.$data_print_sale['username'];
+                                $print_data_user_profile = $database->getReference($path_data_based_on_username)->getValue();
+
+                                foreach($print_data_user_profile as $print_data_user_profile_final => $value_data_user_profile)
+                                {}
+
+                                
+
+
+                            
+
+
+                    ?>
+
                     <div class="user-item">
                         <div class="user-picture">
                             <img src="images/profile-2.png" alt="">
                         </div>
                         <div class="user-info">
                             <p class="title">
-                                Samantha Lin
+                                <?php echo $print_data_user_profile['nama_engkap']; ?>
                             </p>
                             <p class="sub-title">
-                                Membeli 1 Tiket Pagoda
+                                <?php echo $print_data_user_profile['bio']; ?>
                             </p>
                         </div>
                         <a href="#" class="btn btn-small-border btn-primary ">Details</a>
                     </div>
+
+
+                            <?php }?>
 
 
 
