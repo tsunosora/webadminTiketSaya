@@ -30,7 +30,7 @@
 <html>
 
 <head>
-    <title>Dashboard -TiketSaya</title>
+    <title>Dashboard - TiketSaya</title>
     <meta charset="UTF-8">
     <meta name="description" content="Dashboard TiketSaya Admin">
     <meta name="keywords" content="tiketsaya, Web Dashboard, Login Tiket Saya">
