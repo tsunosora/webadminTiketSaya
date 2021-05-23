@@ -1,6 +1,20 @@
 <?php
     include 'includes/user_token.php';
     include 'includes/myfirebase.php';
+
+    //data admin
+    $reference = 'Admin/'.$_SESSION['username'];
+    $checkdata = $database->getReference($reference)->getValue();
+
+    //data turis
+    $path_turis_fb = 'Users';
+    $checkdata_turis = $database->getReference($path_turis_fb)->getValue();
+
+    print_r($checkdata_turis);
+
+    // cetak data admin
+    $nama_admi_f = $checkdata['nama_admin'];
+
 ?>
 
 
