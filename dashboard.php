@@ -9,11 +9,13 @@
     //data turis
     $path_turis_fb = 'Users';
     $checkdata_turis = $database->getReference($path_turis_fb)->getValue();
-
-    print_r($checkdata_turis);
+    
+    //data Sales/tiket
+    $path_tiket_fb = 'MyTickets/';
+    $checkdata_tiket = $database->getReference($path_tiket_fb)->getValue();
 
     // cetak data admin
-    $nama_admi_f = $checkdata['nama_admin'];
+    $nama_admin_f = $checkdata['nama_admin'];
 
 ?>
 
@@ -116,7 +118,7 @@
             </div>
 
             <p class="admin-name">
-                Faisal
+                <?php echo($nama_admin_f); ?>
             </p>
 
             <p class="admin-level">
@@ -154,7 +156,7 @@
                     </li>
                 </a>
 
-                <a href="#">
+                <a href="includes/user_destroy.php">
                     <li style="margin-top: 130px;">
                         Log Out
                     </li>
@@ -190,7 +192,7 @@
                             </H4>
 
                             <p class="value-item">
-                                209
+                                <?php echo count($checkdata_turis); ?>
                             </p>
 
                             <p class="desc-item">
@@ -214,7 +216,7 @@
                             </H4>
 
                             <p class="value-item">
-                                12
+                                <?php echo count($checkdata_tiket); ?>
                             </p>
 
                             <p class="desc-item">
